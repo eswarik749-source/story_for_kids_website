@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Tales - Kids Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <div class="logo">🌈 Little Tales</div>
+
+        <div class="controls">
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">🇬🇧 English</option>
+                <option value="ta">🇮🇳 Tamil</option>
+                <option value="hi">🇮🇳 Hindi</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="kn">Kannada</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="zh">Chinese</option>
+            </select>
+
+            <button id="themeBtn" onclick="toggleTheme()">
+                🌙 Night Mode
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <span class="tag">✨ FREE STORIES FOR KIDS</span>
+            <h1 id="heading">A World of Wonderful Stories!</h1>
+            <p id="subtitle">
+                Explore magical stories and learn beautiful lessons.
+            </p>
+        </section>
+
+        <section class="story-card">
+
+            <div class="story-image">
+                <img
+                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900"
+                    alt="Beautiful green forest">
+                <div class="image-label">🌳 Magical Forest</div>
+            </div>
+
+            <div class="story-content">
+
+                <span class="category">🐢 ANIMAL STORY</span>
+
+                <h2 id="storyTitle">The Tortoise and the Hare</h2>
+
+                <p id="storyText">
+                    Once upon a time, a proud hare lived in a beautiful forest.
+                    He always laughed at the slow-moving tortoise.
+
+                    One day, the tortoise challenged the hare to a race.
+                    The hare ran very fast and soon went far ahead.
+
+                    Feeling confident, the hare decided to take a nap
+                    under a tree.
+
+                    Meanwhile, the tortoise continued walking slowly
+                    without stopping.
+
+                    Finally, the tortoise reached the finish line first!
+                    The hare woke up and realized his mistake.
+
+                    Everyone celebrated the tortoise's victory.
+                </p>
+
+                <div class="moral">
+                    💡 <strong id="moralTitle">Moral of the Story:</strong>
+                    <span id="moralText">
+                        Slow and steady wins the race!
+                    </span>
+                </div>
+
+                <button class="read-btn" onclick="readStory()">
+                    🔊 Read Story
+                </button>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>🌟 Made with Love for Little Readers | © Little Tales</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

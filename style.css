@@ -1,0 +1,268 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: #26352b;
+    transition: 0.4s;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255,255,255,0.35),
+                        rgba(255,255,255,0.45)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600")
+        center/cover no-repeat;
+    z-index: -1;
+}
+
+header {
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #168653;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+}
+
+select, #themeBtn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.container {
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.tag {
+    background: #fff1a8;
+    color: #a66a00;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-top: 14px;
+    color: #176b42;
+}
+
+.welcome p {
+    margin-top: 8px;
+    color: #344d3b;
+}
+
+.story-card {
+    width: 850px;
+    max-width: 95%;
+    height: 350px;
+    display: flex;
+    background: rgba(255,255,255,0.94);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.story-image {
+    width: 42%;
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.story-content {
+    width: 58%;
+    padding: 23px 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category {
+    color: #e68b35;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.story-content h2 {
+    color: #21834f;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.story-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.moral {
+    background: #fff5ce;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 13px;
+    font-size: 12px;
+    color: #7d5711;
+}
+
+.read-btn {
+    margin-top: 14px;
+    padding: 11px;
+    border: none;
+    border-radius: 25px;
+    background: #20a567;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.read-btn:hover {
+    background: #087b46;
+    transform: scale(1.02);
+}
+
+footer {
+    margin-top: 14px;
+    font-size: 12px;
+    color: white;
+    text-shadow: 1px 1px 3px #333;
+}
+
+/* NIGHT MODE */
+
+body.dark {
+    background: #17251e;
+    color: white;
+}
+
+body.dark .background {
+    background:
+        linear-gradient(rgba(0,0,0,0.7),
+                        rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600")
+        center/cover no-repeat;
+}
+
+body.dark header {
+    background: rgba(20,35,27,0.95);
+}
+
+body.dark .logo,
+body.dark .welcome h1 {
+    color: #a5f3c3;
+}
+
+body.dark .welcome p {
+    color: #eee;
+}
+
+body.dark .story-card {
+    background: #263b30;
+}
+
+body.dark .story-content p {
+    color: #eee;
+}
+
+body.dark .story-content h2 {
+    color: #a5f3c3;
+}
+
+body.dark .moral {
+    background: #4b4930;
+    color: #fff1a8;
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow: auto;
+    }
+
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        height: auto;
+        min-height: calc(100vh - 100px);
+    }
+
+    .welcome h1 {
+        font-size: 23px;
+    }
+
+    .story-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .story-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .story-content {
+        width: 100%;
+        padding: 20px;
+    }
+}
